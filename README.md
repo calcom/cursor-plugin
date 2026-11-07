@@ -6,19 +6,19 @@ The plugin connects Cursor to the hosted Cal.com MCP server at `https://mcp.cal.
 
 ## What's included
 
-The plugin lives in [`plugins/cal-com`](plugins/cal-com):
+The plugin lives in [`plugins/cal.com-cursor-plugin`](plugins/cal.com-cursor-plugin):
 
 - **MCP server** (`mcp.json`): `cal-com` → `https://mcp.cal.com/mcp`
 - **Skill** `cal-com-scheduling`: how to use the Cal.com tools safely and well
 - **Rule** `cal-com.mdc` (always on): never guess IDs, emails or time zones; check availability before booking; confirm before any change
 - **Commands:** `/cal-today` (today's bookings in your time zone) and `/cal-book` (find a slot and book it after you confirm)
 
-See the [plugin README](plugins/cal-com/README.md) for install, sign-in and troubleshooting.
+See the [plugin README](plugins/cal.com-cursor-plugin/README.md) for install, sign-in and troubleshooting.
 
 ## Install
 
 - **Cursor Marketplace:** search for **Cal.com** and click **Add to Cursor** (once listed).
-- **Local:** copy `plugins/cal-com` to `~/.cursor/plugins/local/cal-com` and reload Cursor.
+- **Local:** copy `plugins/cal.com-cursor-plugin` to `~/.cursor/plugins/local/cal.com-cursor-plugin` and reload Cursor.
 - **Team marketplace:** Cursor dashboard → **Plugins & MCPs → Add Marketplace → Import from Repo** → `https://github.com/calcom/cursor-plugin`.
 
 ## Development

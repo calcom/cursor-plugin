@@ -1,5 +1,5 @@
 {
-  "name": "cal-com",
+  "name": "cal.com-cursor-plugin",
   "displayName": "Cal.com",
   "version": "0.1.0",
   "description": "Manage your Cal.com scheduling from Cursor: check availability, list and book meetings, and manage event types and schedules through the hosted Cal.com MCP server.",

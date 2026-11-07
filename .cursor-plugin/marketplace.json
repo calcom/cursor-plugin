@@ -9,8 +9,8 @@
   },
   "plugins": [
     {
-      "name": "cal-com",
-      "source": "./plugins/cal-com",
+      "name": "cal.com-cursor-plugin",
+      "source": "./plugins/cal.com-cursor-plugin",
       "description": "Scheduling with Cal.com: availability, bookings, event types and schedules through the hosted Cal.com MCP server"
     }
   ]

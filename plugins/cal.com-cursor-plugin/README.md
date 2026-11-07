@@ -15,7 +15,7 @@ Use your Cal.com account from Cursor's agent. Check today's meetings, find free 
 ## Install
 
 - **From the Cursor Marketplace:** find **Cal.com** and click **Add to Cursor**. *(Available once the plugin is listed.)*
-- **From this repo (local):** copy `plugins/cal-com` to `~/.cursor/plugins/local/cal-com`, then restart Cursor or run **Developer: Reload Window**. You can also use **Import from Disk** in Cursor's Customize view. On Enterprise plans an admin may need to turn on **Allow Local Plugin Imports**.
+- **From this repo (local):** copy `plugins/cal.com-cursor-plugin` to `~/.cursor/plugins/local/cal.com-cursor-plugin`, then restart Cursor or run **Developer: Reload Window**. You can also use **Import from Disk** in Cursor's Customize view. On Enterprise plans an admin may need to turn on **Allow Local Plugin Imports**.
 - **For a team:** in the Cursor dashboard, go to **Plugins & MCPs → Add Marketplace → Import from Repo** and enter `https://github.com/calcom/cursor-plugin`.
 
 ## Sign in
