@@ -1,34 +1,39 @@
-# Cursor plugin template
+# Cal.com plugin for Cursor
 
-Build and publish Cursor Marketplace plugins from a single repo.
+Manage your [Cal.com](https://cal.com) scheduling from Cursor's agent. Check your meetings, find free slots, book, reschedule and cancel (always after you confirm), and look up event types, schedules and teams.
 
-Two starter plugins are included:
+The plugin connects Cursor to the hosted Cal.com MCP server at `https://mcp.cal.com/mcp`. You sign in with OAuth on first use. No API key is needed.
 
-- **starter-simple**: rules and skills only
-- **starter-advanced**: rules, skills, agents, commands, hooks, MCP, and scripts
+## What's included
 
-## Getting started
+The plugin lives in [`plugins/cal-com`](plugins/cal-com):
 
-[Use this template](https://github.com/cursor/plugin-template/generate) to create a new repository, then customize:
+- **MCP server** (`mcp.json`): `cal-com` → `https://mcp.cal.com/mcp`
+- **Skill** `cal-com-scheduling`: how to use the Cal.com tools safely and well
+- **Rule** `cal-com.mdc` (always on): never guess IDs, emails or time zones; check availability before booking; confirm before any change
+- **Commands:** `/cal-today` (today's bookings in your time zone) and `/cal-book` (find a slot and book it after you confirm)
 
-1. `.cursor-plugin/marketplace.json`: set marketplace `name`, `owner`, and `metadata`.
-2. `plugins/*/.cursor-plugin/plugin.json`: set `name` (lowercase kebab-case), `displayName`, `author`, `description`, `keywords`, `license`, and `version`.
-3. Replace placeholder rules, skills, agents, commands, hooks, scripts, and logos.
+See the [plugin README](plugins/cal-com/README.md) for install, sign-in and troubleshooting.
 
-To add more plugins, see `docs/add-a-plugin.md`.
+## Install
 
-## Single plugin vs multi-plugin
+- **Cursor Marketplace:** search for **Cal.com** and click **Add to Cursor** (once listed).
+- **Local:** copy `plugins/cal-com` to `~/.cursor/plugins/local/cal-com` and reload Cursor.
+- **Team marketplace:** Cursor dashboard → **Plugins & MCPs → Add Marketplace → Import from Repo** → `https://github.com/calcom/cursor-plugin`.
 
-This template defaults to **multi-plugin** (multiple plugins in one repo).
+## Development
 
-For a **single plugin**, move your plugin folder contents to the repository root, keep one `.cursor-plugin/plugin.json`, and remove `.cursor-plugin/marketplace.json`.
+This repo follows the [Cursor plugin template](https://github.com/cursor/plugin-template). The marketplace manifest is `.cursor-plugin/marketplace.json`.
 
-## Submission checklist
+Validate before committing:
 
-- Each plugin has a valid `.cursor-plugin/plugin.json`.
-- Plugin names are unique, lowercase, and kebab-case.
-- `.cursor-plugin/marketplace.json` entries map to real plugin folders.
-- All frontmatter metadata is present in rule, skill, agent, and command files.
-- Logos are committed and referenced with relative paths.
-- `node scripts/validate-template.mjs` passes.
-- Repository link is ready for submission to the Cursor team (Slack or `kniparko@anysphere.com`).
+```bash
+node scripts/validate-template.mjs
+```
+
+To add another plugin, see [`docs/add-a-plugin.md`](docs/add-a-plugin.md).
+
+## Links
+
+- Cal.com docs: https://cal.com/docs
+- Cursor plugin docs: https://cursor.com/docs/plugins

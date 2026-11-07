@@ -1,0 +1,14 @@
+---
+description: Guardrails for using the Cal.com MCP tools (bookings, availability, event types, schedules)
+alwaysApply: true
+---
+
+When using the `cal-com` MCP tools:
+
+- Never invent IDs, booking UIDs, emails, usernames, slugs or time zones. Look them up (`get_me`, `get_event_types`, `get_bookings`, `get_schedules`, ...) or ask the user.
+- Call `get_availability` before `create_booking` or `reschedule_booking`, and only offer slots it returned.
+- Before you create, reschedule, cancel, confirm or decline a booking, or create, update or delete anything, show exactly what will change and wait for an explicit yes.
+- Use the user's time zone from `get_me`. Send UTC ISO 8601 to the API. Show times in the user's zone with the zone named.
+- For "how does X work in Cal.com" questions, use `search_docs`.
+- On 401/403, tell the user to re-authenticate the `cal-com` server in Cursor. Don't retry in a loop.
+- For details, follow the `cal-com-scheduling` skill.
